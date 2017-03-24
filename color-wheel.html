@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="flatui, flat, ui, color, palette, flat ui colors">
+<meta name="description" content="Flat ui colors is a color picker for Material Design which gives you the perfect colors for flat designs.">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+<title>Color Wheel - Best Flat UI Colors</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+<link id="favicon" rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div class="panel panel-white left">
+  <!-- Overlay div -->
+  <div class="overlay"></div>
+  <!-- Animated button -->
+  <a class="ninja-btn" title="menu"><span></span></a>
+  
+  
+  <!-- Menu list -->
+  
+  <div class="menu-header">
+  
+  	<a href="index.html"><img src="images/menu.jpg"></a>
+  		
+        <h2 class="menu-text">
+       Flat UI Colors
+       </h2>  
+       
+        <div class="menu-small-text">
+     	 Web Designing Tools
+       </div> 
+        
+  </div>
+  
+  <ul>
+   
+    <li class="active"><a href="index.html">Home</a></li>
+    <li><a href="material.html"><h2>Flat Material UI Design Colors</h2></a></li>
+	<li><a href="metro.html"><h2>Flat UI Metro Colors</h2></a>
+	<li><a href="color-wheel.html">Create Custom Palette</a></li>
+   
+     <div class="menu-divider"> </div>
+    
+    <div class="created-by">
+    Created By
+    </div>
+    
+    <li class="menu-contacts"><a href="https://twitter.com/talhazahid56" target="_blank" class="menu-twitter">@talha zahid</a></li>
+
+  </ul>
+</div>
+
+ <div class="panel-overlay"></div>
+	<header>
+
+
+        		<a href="index.html" class="logo">
+                
+                <img src="images/menu.jpg">
+                
+                
+                <h1>Flat UI Colors  </h1>
+                
+                
+                </a>
+
+
+
+
+        <div class="top-tweet">
+
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this awesome Flat UI color palette..." data-via="talhazahid56" data-hashtags="ui,ux,design">Tweet</a>
+            <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');
+            </script>
+
+        </div>
+
+
+    </header>
+    
+    
+    
+     <section class="main-heading wheel-bg-main">
+    
+   		 <h2 class="header-text">
+        
+		Generate the color codes you’re looking for.
+       	<br> 
+ The tool allows you to set different color rules to easily find complimentary colors to work with in your design.
+	
+		
+        
+        </h2>
+    
+    </section>
+    
+    
+    
+    
+    
+
+    <div id="selectedColorContainer">
+        <div id="selectedColor">
+        
+        </div>
+        successfuly copied to your clipboard!
+    </div>
+    
+    
+    
+    
+    
+<section>
+
+    <div class="grid">
+    
+    
+        
+    
+        
+        
+        <div class="row">
+        
+        
+        <!-- rule box -->
+<div class="rule-box">
+  <h4>Color Rule</h4>
+  <ul id="rules">
+    <li data-type="1" class="active">Analogous</li>
+    <li data-type="2">Monochromatic</li>
+    <li data-type="3">Triad</li>
+    <li data-type="4">Complementary</li>
+    <li data-type="5">Custom</li>
+  </ul>
+</div>
+<!-- picker canvas -->
+<div class="canvas">
+  <canvas id="picker"></canvas>
+</div>
+<!-- samples -->
+<div class="samples">
+  <div class="col" data-sample="3">
+    <div class="sample"></div>
+    <div class="input-group">
+      <span>RGB</span>
+      <input type="text" maxlength="3" class="rgb r">
+      <input type="text" maxlength="3" class="rgb g">
+      <input type="text" maxlength="3" class="rgb b">
+    </div>
+    <div class="input-group">
+      <span>HEX</span>
+      <input type="text" class="hex">
+    </div>
+  </div>
+  <div class="col" data-sample="1">
+    <div class="sample"></div>
+    <div class="input-group">
+      <span>RGB</span>
+      <input type="text" maxlength="3" class="rgb r">
+      <input type="text" maxlength="3" class="rgb g">
+      <input type="text" maxlength="3" class="rgb b">
+    </div>
+    <div class="input-group">
+      <span>HEX</span>
+      <input type="text" class="hex">
+    </div>
+  </div>
+  <div class="col selected" data-sample="0">
+    <div class="sample"></div>
+    <div class="input-group">
+      <span>RGB</span>
+      <input type="text" maxlength="3" class="rgb r">
+      <input type="text" maxlength="3" class="rgb g">
+      <input type="text" maxlength="3" class="rgb b">
+    </div>
+    <div class="input-group">
+      <span>HEX</span>
+      <input type="text" class="hex">
+    </div>
+  </div>
+  <div class="col" data-sample="2">
+    <div class="sample"></div>
+    <div class="input-group">
+      <span>RGB</span>
+      <input type="text" maxlength="3" class="rgb r">
+      <input type="text" maxlength="3" class="rgb g">
+      <input type="text" maxlength="3" class="rgb b">
+    </div>
+    <div class="input-group">
+      <span>HEX</span>
+      <input type="text" class="hex">
+    </div>
+  </div>
+  <div class="col" data-sample="4">
+    <div class="sample"></div>
+    <div class="input-group">
+      <span>RGB</span>
+      <input type="text" maxlength="3" class="rgb r">
+      <input type="text" maxlength="3" class="rgb g">
+      <input type="text" maxlength="3" class="rgb b">
+    </div>
+    <div class="input-group">
+      <span>HEX</span>
+      <input type="text" class="hex">
+    </div>
+  </div>
+</div>
+<!-- scripts -->
+
+
+
+
+        
+        
+           
+        </div>
+        
+        
+        
+        <div class="credits">
+        Full Credits to <a href="http://codepen.io/social_quotient/" target="_blank">John Curtis</a> for making this wheel
+        </div>
+        
+        
+        
+        
+        
+	</div>
+    
+ </section>  
+ 
+ 
+ 		<footer>
+        
+       <h2> Flat UI Colors Palette  Designed and built with all the love in the world by <a href="https://twitter.com/talhazahid56" target="_blank">@talha</a>.</h2>
+        
+        </footer>
+    
+    
+    
+        <script src="javascript/component.js"></script>
+        <script src="javascript/wheel.js"></script>
+
+</body>
+</html>
